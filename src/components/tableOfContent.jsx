@@ -1,4 +1,5 @@
 import Content from '../../data/tableOfContent.mdx'
+import Duck from '../../assets/duck.png'
 
 export const TableOfContents = ({ active="" }) => {
   return (
@@ -15,7 +16,8 @@ export const TableOfContents = ({ active="" }) => {
       padding: '20px',
       boxSizing: 'border-box',
       overflowY: 'auto',
-      zIndex: 10
+      zIndex: 10,
+      cursor: `url(${Duck}, auto)`
     }}>
       <div style={{ 
         fontSize: '0.9rem', 
