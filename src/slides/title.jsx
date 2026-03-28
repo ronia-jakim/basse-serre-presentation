@@ -1,14 +1,14 @@
 import 'katex/dist/katex.min.css'
 import { useEffect } from 'react'
 
-import { fireSideCannons } from '../components/confetti'
+import { fireSideDucks } from '../components/confetti'
 
 import Content from '../../data/slides/title.mdx'
 
 export const Title = ({ hasPrevious=true, hasNext=true }) => {
 
   useEffect(() => {
-    fireSideCannons()
+    fireSideDucks()
   }, [])
 
   return (
