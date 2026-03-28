@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 import { fireSideCannons } from '../components/confetti'
 
-import Content from '../../data/slides/test.mdx'
+import Content from '../../data/slides/title.mdx'
 
 export const Title = ({ hasPrevious=true, hasNext=true }) => {
 
