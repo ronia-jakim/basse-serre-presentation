@@ -7,6 +7,10 @@ import rehypeKatex from 'rehype-katex'
 export default defineConfig({
   base: '/basse-serre-presentation/',
 
+  build: {
+    chunkSizeWarningLimit: 1000, // Boost from 500kb to 1000kb
+  },
+
   plugins: [
     { enforce: 'pre', 
       ...mdx( {
