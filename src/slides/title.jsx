@@ -37,8 +37,8 @@ export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="
         <SlideContent components={{ 
           Theorem, 
           ConfettiTrigger, 
-          DuckTrigger }} 
-        />
+          DuckTrigger 
+        }}/>
       </main>
       <div style={{
         position: 'fixed',

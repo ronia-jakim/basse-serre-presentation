@@ -22,7 +22,7 @@ export const ConfettiTrigger = () => {
 export const DuckTrigger = () => {
   const elementRef = useRef(null)
 
-  fireSideDucks()
+  fireSideDucks(0, 1, 1, 1)
 
 
   return <span ref={elementRef} style={{ display: 'inline-block' }} />

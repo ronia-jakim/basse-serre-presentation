@@ -35,16 +35,16 @@ export const fireSideCannons = (leftX=0, rightX=1,  originY=1) => {
 };
 
 
-export const fireSideDucks = (leftX=0, rightX=1,  originY=1) => {
-  const end = Date.now() + 1000;
+const duck=confetti.shapeFromText({ text: '🦆', scalar: 3 });
 
-  const duck=confetti.shapeFromText({ text: '🦆', scalar: 3 });
+export const fireSideDucks = (leftX=0, rightX=1,  originY=1, count=2) => {
+  const end = Date.now() + 1000;
 
   (function frame() {
     confetti({
       shapes: [duck],
       scalar: 5,
-      particleCount: 2,
+      particleCount: count,
       angle: 60,
       spread: 70,
       origin: { x: leftX, y: originY },
@@ -52,7 +52,7 @@ export const fireSideDucks = (leftX=0, rightX=1,  originY=1) => {
     confetti({
       shapes: [duck],
       scalar: 5,
-      particleCount: 2,
+      particleCount: count,
       angle: 120,
       spread: 70,
       origin: { x: rightX, y: originY },
