@@ -6,6 +6,8 @@ import rehypeKatex from 'rehype-katex'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: 'basse-serre-presentation',
+
   plugins: [
     { enforce: 'pre', 
       ...mdx( {
