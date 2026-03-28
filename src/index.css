@@ -1,7 +1,8 @@
 :root {
   --text: #08060D;
   --text-h: #5F9C3F;
-  --bg: rgba(255, 225, 52, 0.2);
+  --bg: #fff9d5;
+  /* rgba(255, 225, 52, 0.2); */
   --border: #5F9C3F;
   --code-bg: rgba(255, 225, 52, 0.2);
   --accent: #F5BD1E;
