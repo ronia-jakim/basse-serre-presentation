@@ -1,5 +1,4 @@
 export const Theorem = ({ title, children }) => {
-  // Neutral, high-contrast styles for a "standard" box
   const style = {
     border: '#5F9C3F',
     bg: 'rgba(123, 182, 98, 0.05)',

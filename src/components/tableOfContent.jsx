@@ -44,7 +44,13 @@ export const TableOfContents = ({ active="" }) => {
       `}} />
 
       <div className="toc-container">
-        <Content active={active} />
+        <Content 
+          active={active} 
+          components={{
+            h3: (props) => <h3 style={{ color: '#505050' }}>{props.children}</h3>,
+            strong: (props) => <strong style={{ color: '#F5BD1E' }}>{props.children}</strong>
+          }}
+        />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import { TableOfContents } from '../components/tableOfContent'
 import { PreviousButton, NextButton } from '../components/slideButtons'
 import { Theorem } from '../components/theoremBox'
 
-export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="", SlideContent, isTitle=false }) => {
+export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="", SlideContent, isTitle }) => {
 
   useEffect(() => {
     fireSideDucks()
@@ -15,10 +15,11 @@ export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="
   return (
     <div style={{ 
         padding: '20px',
-        paddingBottom: isTitle ? '30vh' : '10vh',
+        paddingBottom: isTitle ? '50px' : '10px',
+        paddingTop: isTitle ? '0px' : '20px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: isTitle ? 'center' : 'flex-start',
         alignItems: 'center',
         flex: 1,
         fontFamily: 'sans-serif',
@@ -26,7 +27,12 @@ export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="
     }}>
 
     <TableOfContents active={active}/>
-      <main style={{ textAlign: isTitle ? 'center' : 'left' }}>
+      <main style={{ 
+        textAlign: isTitle ? 'center' : 'left', 
+        alignItems: isTitle ? 'center' : 'left', 
+        justifyContent: isTitle ? 'center' : 'left', 
+        width: '100%' 
+      }}>
         <SlideContent components={{ Theorem }} />
       </main>
       <div style={{

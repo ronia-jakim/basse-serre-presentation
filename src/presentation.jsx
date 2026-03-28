@@ -3,13 +3,20 @@ import { useSearchParams } from 'react-router-dom';
 
 import { Slide } from './slides/title'
 
-import MainTitle from '../data/slides/title.mdx'
-import TreeTitle from '../data/slides/treeIsometriesTitle.mdx'
-import IsometryDefinition from '../data/slides/isometryDefinition.mdx'
+const modules = import.meta.glob('../data/slides/*.mdx', { eager: true });
+const sortedKeys = Object.keys(modules).sort();
+const slides = [];
+const isTitle = [];
+const active = [];
+sortedKeys.forEach((key) => {
+  const fileName = key.split('/').pop().replace('.mdx', '');
+  
+  const [index, titleStatus, activeValue] = fileName.split('_');
 
-const slides = [ MainTitle, TreeTitle, IsometryDefinition ]
-const isTitle = [true, true, false]
-const active = [ "", "", "minsets" ]
+  slides.push(modules[key].default);
+  isTitle.push(titleStatus === 'true');
+  active.push(activeValue === 'none' ? "" : activeValue);
+});
 
 export const Slides = () => {
   const [searchParams, setSearchParams] = useSearchParams();

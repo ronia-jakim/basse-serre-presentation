@@ -1,12 +1,16 @@
-export const Item = ({ name, active, children }) => (
-  <span style={{ 
-    color: active === name ? '#5F9C3F' : '#888888', 
-    fontWeight: active === name ? 'bold' : 'normal',
-    transition: 'all 0.3s ease'
-  }}>
-    { children }
-  </span>
-)
+export const Item = ({ name, active, children }) => {
+  const isActive = String(active) === String(name);
+
+  return (
+    <span style={{ 
+      color: isActive ? '#5F9C3F' : '#888888', 
+      fontWeight: isActive ? 'bold' : 'normal',
+      transition: 'all 0.3s ease'
+    }}>
+      { children }
+    </span>
+  );
+};
 
 ### Basse-Serre theory
 
