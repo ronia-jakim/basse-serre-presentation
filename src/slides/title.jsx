@@ -5,7 +5,7 @@ import { fireSideDucks } from '../components/confetti'
 import { TableOfContents } from '../components/tableOfContent'
 import { PreviousButton, NextButton } from '../components/slideButtons'
 import { Theorem } from '../components/theoremBox'
-import { ConfettiTrigger } from '../components/confettiTreigger'
+import { ConfettiTrigger, DuckTrigger } from '../components/confettiTreigger'
 
 export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="", SlideContent, isTitle }) => {
 
@@ -34,7 +34,11 @@ export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="
         justifyContent: isTitle ? 'center' : 'left', 
         width: '100%' 
       }}>
-        <SlideContent components={{ Theorem, ConfettiTrigger }} />
+        <SlideContent components={{ 
+          Theorem, 
+          ConfettiTrigger, 
+          DuckTrigger }} 
+        />
       </main>
       <div style={{
         position: 'fixed',

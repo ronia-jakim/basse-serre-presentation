@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { fireConfetti } from './confetti'
+import { fireConfetti, fireSideDucks } from './confetti'
 
 export const ConfettiTrigger = () => {
   const elementRef = useRef(null)
@@ -18,3 +18,12 @@ export const ConfettiTrigger = () => {
   return <span ref={elementRef} style={{ display: 'inline-block' }} />
 }
 
+
+export const DuckTrigger = () => {
+  const elementRef = useRef(null)
+
+  fireSideDucks()
+
+
+  return <span ref={elementRef} style={{ display: 'inline-block' }} />
+}
