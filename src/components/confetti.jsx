@@ -1,10 +1,10 @@
 import confetti from 'canvas-confetti';
 
-export const fireConfetti = () => {
+export const fireConfetti = ({y=0.6, x=0.5}) => {
   confetti({
     particleCount: 150,
-    spread: 70,
-    origin: { y: 0.6 },
+    spread: 200,
+    origin: { y: y, x: x },
     colors: ['#5F9C3F', '#FFF347', '#F5BD1E']
   });
 };
