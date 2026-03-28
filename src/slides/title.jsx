@@ -4,8 +4,9 @@ import { useEffect } from 'react'
 import { fireSideDucks } from '../components/confetti'
 import { TableOfContents } from '../components/tableOfContent'
 import { PreviousButton, NextButton } from '../components/slideButtons'
+import { Theorem } from '../components/theoremBox'
 
-export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="", SlideContent }) => {
+export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="", SlideContent, isTitle=false }) => {
 
   useEffect(() => {
     fireSideDucks()
@@ -14,7 +15,7 @@ export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="
   return (
     <div style={{ 
         padding: '20px',
-        paddingBottom: '30vh',
+        paddingBottom: isTitle ? '30vh' : '10vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -25,8 +26,8 @@ export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="
     }}>
 
     <TableOfContents active={active}/>
-      <main>
-        <SlideContent />
+      <main style={{ textAlign: isTitle ? 'center' : 'left' }}>
+        <SlideContent components={{ Theorem }} />
       </main>
       <div style={{
         position: 'fixed',

@@ -1,21 +1,27 @@
-import { useState } from 'react' 
-import { useEffect} from 'react'
+import { useState, useEffect } from 'react' 
+import { useSearchParams } from 'react-router-dom';
 
 import { Slide } from './slides/title'
 
 import MainTitle from '../data/slides/title.mdx'
 import TreeTitle from '../data/slides/treeIsometriesTitle.mdx'
+import IsometryDefinition from '../data/slides/isometryDefinition.mdx'
 
-const slides = [ MainTitle, TreeTitle ]
-const active = [ "", "minsets" ]
+const slides = [ MainTitle, TreeTitle, IsometryDefinition ]
+const isTitle = [true, true, false]
+const active = [ "", "", "minsets" ]
 
 export const Slides = () => {
-  const [currentSlide, setCurrentSlide] = useState(0) 
+  const [searchParams, setSearchParams] = useSearchParams();
+  const getInitialIndex = () => {
+    const s = parseInt(searchParams.get('slide'), 10);
+    return !isNaN(s) && s >= 0 && s < slides.length ? s : 0;
+  };
+  const [currentSlide, setCurrentSlide] = useState(getInitialIndex()) 
 
   const next = () => {
     if (currentSlide < slides.length - 1) setCurrentSlide(currentSlide + 1)
   }
-
   const prev = () => {
     if (currentSlide > 0) setCurrentSlide(currentSlide - 1)
   }
@@ -32,6 +38,10 @@ export const Slides = () => {
     }
   }, [currentSlide])
 
+  useEffect(() => {
+    setSearchParams({ slide: currentSlide }, { replace: true });
+  }, [currentSlide, setSearchParams]);
+
   const activeSlide = slides[currentSlide] 
   
   return ( 
@@ -41,7 +51,8 @@ export const Slides = () => {
       hasNext={currentSlide < slides.length - 1} 
       onNext={next}
       active={active[currentSlide]}
-      SlideContent={activeSlide} 
+      SlideContent={activeSlide}
+      isTitle={isTitle[currentSlide]}
     />
   )
 }
