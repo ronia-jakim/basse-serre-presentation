@@ -11,39 +11,41 @@ export const TableOfContents = ({ active="" }) => {
       height: '100vh',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'left',
-      alignItems: 'left',
       padding: '20px',
       boxSizing: 'border-box',
       overflowY: 'auto',
       zIndex: 10,
-      cursor: `url(${Duck}, auto)`
+      cursor: `url(${Duck}), auto` // Standard syntax
     }}>
-      <div style={{ 
-        fontSize: '0.9rem', 
-        textAlign: 'left', 
-        color: '#505050' 
-      }} className="toc-container">
-        <Content active={active} />
-      </div>
-
-      <style>{`
+      <style dangerouslySetInnerHTML={{ __html: `
+        .toc-container {
+          font-size: 0.9rem;
+          text-align: left;
+          color: #505050;
+        }
         .toc-container ul {
-          list-style: none; /* Remove default dots */
+          list-style: none;
           padding-left: 0;
         }
         .toc-container li {
           position: relative;
-          padding-left: 25px; /* Space for the duck */
+          padding-left: 25px;
           margin-bottom: 8px;
         }
         .toc-container li::before {
-          content: '🦆';    /* The Duck! */
+          content: '🦆';
           position: absolute;
           left: 0;
           font-size: 1rem;
         }
-      `}</style>
+        .toc-container * {
+          cursor: url(${Duck}), auto !important;
+        }
+      `}} />
+
+      <div className="toc-container">
+        <Content active={active} />
+      </div>
     </div>
   );
 };
