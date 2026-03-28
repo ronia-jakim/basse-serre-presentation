@@ -3,7 +3,7 @@
   --text-h: #5F9C3F;
   --bg: rgba(255, 225, 52, 0.2);
   --border: #5F9C3F;
-  --code-bg: #FFF;
+  --code-bg: rgba(255, 225, 52, 0.2);
   --accent: #F5BD1E;
   
   --slide-bg: #FFFEEC;
@@ -84,19 +84,30 @@ p {
   margin: 0;
 }
 
+@font-face {
+  font-family: 'Bitcount Single';
+  src: url('/fonts/bitcount.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 code,
 .counter {
-  font-family: var(--mono);
+  font-family: 'Bitcount Single', monospace !important;
   display: inline-flex;
   border-radius: 4px;
   color: var(--text-h);
 }
 
 code {
-  font-size: 15px;
+  font-size: 18px;
+  font-family: 'Bitcount Single', monospace !important;
   line-height: 135%;
-  padding: 4px 8px;
+  padding: 8px 15px;
   background: var(--code-bg);
+  text-align: left;
+  border: 1px solid;
+  border-color: var(--bg);
 }
 
 button {

@@ -36,7 +36,7 @@ export const fireSideCannons = (leftX=0, rightX=1,  originY=1) => {
 
 
 export const fireSideDucks = (leftX=0, rightX=1,  originY=1) => {
-  const end = Date.now() + 2 * 1000;
+  const end = Date.now() + 1000;
 
   const duck=confetti.shapeFromText({ text: '🦆', scalar: 3 });
 
