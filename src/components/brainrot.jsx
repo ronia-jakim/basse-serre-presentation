@@ -11,7 +11,7 @@ export const MovieClip = () => {
     <div style={{
       position: 'fixed',
       right: '30px',
-      top: 0,
+      top: '15px',
       overflow: 'hidden',
       width: '315px',
       height: '560px',  
