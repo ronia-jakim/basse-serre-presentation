@@ -15,7 +15,7 @@ export const TableOfContents = ({ active="" }) => {
       boxSizing: 'border-box',
       overflowY: 'auto',
       zIndex: 10,
-      cursor: `url(${Duck}), auto` // Standard syntax
+      cursor: `url(${Duck}), auto` 
     }}>
       <style dangerouslySetInnerHTML={{ __html: `
         .toc-container {
