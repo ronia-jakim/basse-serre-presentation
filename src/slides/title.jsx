@@ -6,7 +6,7 @@ import { TableOfContents } from '../components/tableOfContent'
 import { PreviousButton, NextButton } from '../components/slideButtons'
 import { Theorem } from '../components/theoremBox'
 import { ConfettiTrigger, DuckTrigger } from '../components/confettiTreigger'
-import { MovieClip } from '../components/brainrot'
+import { MovieClip, TreeClip } from '../components/brainrot'
 
 export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="", SlideContent, isTitle }) => {
 
@@ -30,6 +30,7 @@ export const Slide = ({ hasPrevious=true, onPrev, hasNext=true, onNext, active="
 
     <TableOfContents active={active}/>
     <MovieClip />
+    <TreeClip />
       <main style={{ 
         textAlign: isTitle ? 'center' : 'left', 
         alignItems: isTitle ? 'center' : 'left', 
