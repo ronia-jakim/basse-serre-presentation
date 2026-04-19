@@ -1,0 +1,43 @@
+# Graph of groups
+<br />
+
+### Example
+
+- Let $T$ be a one-edge tree with vertices $P$ and $Q$ connected via an edge $\gamma=(P,Q)$. 
+<div style={{ height: '-2px' }} />
+
+- Put groups $G_P$ and $G_Q$ on the corresponding vertices and a group $G_\gamma=G_{\overline{\gamma}}$ on the edge. 
+<div style={{ height: '-2px' }} />
+
+- Then $G_T=G_P\ast_{G_\gamma}G_Q$.
+<br />
+
+### Example
+
+- Let $T$ be a tree obtained from $T'$ by adjoining a (leaf) vertex $P$ via an edge $\gamma$.
+<div style={{ height: '-2px' }} />
+
+- Then $G_T=G_{T'}\ast_{G_\gamma}G_P$ (think about $G_{T'}$ as one big vertex)
+<div style={{ height: '-2px' }} />
+
+*Usefull for inductive proofs* 
+<br />
+
+### Example
+
+- $(G_i)_{i\in I}$ - a collection of groups, $A$ - another group
+<div style={{ height: '-2px' }} />
+
+- $f_i:A\to G_i$ a monomorphism
+<div style={{ height: '-2px' }} />
+
+- Construct a tree $T$ with vertices corresponding to $I\cup\{\heartsuit\}$, where $\heartsuit\not\in I$ ($G_\heartsuit=A$)
+<div style={{ height: '-2px' }} />
+
+- and edges $(\heartsuit, i)$, $(i, \heartsuit)$ for $i\in I$, put $A$ on every edge
+<div style={{ height: '-2px' }} />
+
+$$
+\varinjlim(G, T)=\ast_A G_i
+$$
+

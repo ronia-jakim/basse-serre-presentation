@@ -1,0 +1,27 @@
+import universal from '/assets/latex/diagram.svg'
+
+# Graph of groups
+
+<Theorem title="graph of groups">
+  A graph of groups $(G, T)$ consists of
+  - a graph $T$
+  - groups $G_P$, $P\in V(T)$
+  - groups $G_\gamma$, $\gamma\in E(T)$ $\quad $ ($G_\gamma=G_{\overline{\gamma}}$)
+  - monomorphism $\sigma_\gamma:G_\gamma\to G_{t(\gamma)}=G_P$ if the terminus of $\gamma$ is $P$
+</Theorem>  
+
+Let $G_T=\varinjlim (G, T)$ be the injective limit of the graph of groups $(G, T)$, i.e. 
+- an object $G_T$ 
+<div style={{ height: '-2px' }} />
+
+- along with a family of morphisms $\phi_P:G_P\to G_T$ for $P\in V(T)$
+<div style={{ height: '-2px' }} />
+
+- and $\phi_\gamma: G_\gamma\to G_T$ for $\gamma\in E(T)$
+<div style={{ height: '-2px' }} />
+
+- such that for every edge $\gamma=(P, Q)$ we have $\phi_Q\circ \sigma_\gamma=\phi_\gamma=\phi_P\circ \sigma_{\overline{\gamma}}$
+<div style={{ height: '-2px' }} />
+
+- and for every other object $H$ with morphisms $\psi_P$ and $\psi_\gamma$ satisfying those requirements there exists a unique morphism $u:G_T\to H$ such that $\psi_P=u\circ\phi_P$ and $\psi_\gamma=u\circ\phi_\gamma$.
+<img src={universal} alt="Universal property" style={{ width: '25%', maxWidth: '800px', display: 'block', margin: 'auto' }} />

@@ -1,0 +1,38 @@
+import fundamentalDomain from '/assets/fundamental.png'
+
+# Fundamental domain - fancy example
+
+### Example 
+
+$PSL(2,\mathbb{Z})$ acts on the hyperbolic plane, identified with the upper half plane $H=\{z\in\mathbb{C}\;:\;Re(z)\geq0\}$. 
+
+The fundamental domain of this action is $F=\{z\in H\;:\;|z|>1,\;|Re(z)|<\frac{1}{2}\}$
+
+<br />
+
+Why? Take any point $z\in H$. WLOG $Im(z)>1$ - otherwise "inversions" and translations will help.
+
+Once we are in $Im(z)>1$ simply apply $\begin{bmatrix}1 & \pm 1 \\ 0 & 1\end{bmatrix}$ untill in $F$.
+<br />
+
+**Tree perspective**
+<br />
+
+$$
+y=\{e^{i\theta}\;:\;\frac{\pi}{3}\leq \theta\leq \frac{\theta}{2}\}
+$$
+
+- $y$ is an edge with origin point $P=e^{i\pi/3}$ and terminus $Q=i$ 
+<div style={{ height: '-2px' }} />
+- let $X=SL(2, \mathbb{Z})y$ be the union of its transforms
+<div style={{ height: '-2px' }} />
+- $X$ is a tree (proof: Serre said so) on which $SL(2, \mathbb{Z}$) acts 
+<div style={{ height: '-2px' }} />
+- $X\mod SL(2, \mathbb{Z})=$ the segment $PQ$ 
+<div style={{ height: '-2px' }} />
+
+<div style={{ width: '100%', justifyContent: 'center', display: 'flex' }}>
+  <img src={fundamentalDomain} alt="Tree Isometry" style={{ width: '100%', maxWidth: '800px' }} />
+</div>
+
+

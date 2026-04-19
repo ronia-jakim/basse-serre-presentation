@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
 # Tree isometries
 <br />
 
@@ -7,6 +10,21 @@
   - if $\phi$ is hyperbolic then $Min(\phi)$ is a line $L\subseteq T$.
 </Theorem>
 
-The line $L$ in hyperbolic isometry is called *axis* of $\phi$.
+The line $L$ in hyperbolic isometry is called *axis* of $\phi$ and we will denote it as $Axis(\phi)$.
+<br />
+
+### Examples
+
+Consider the $k$-regular tree $T_k$.
+- elliptic
+  - group: $S_k$
+  - chose a vertex $v\in T_k$
+  - $\sigma\in S_k$ acts on $T_k$ by permuting the neighbours of $v$.
+
+- hyperbolic: 
+  - group: $\mathbb{Z}$
+  - chose a line $L=\{..., v_{-1}, v_0, v_1, ...\}$ in $T_k$ 
+  - define the action of $\mathbb{Z}$ on $T_k$ as follows: the generator $1\in \mathbb{Z}$ moves $v_i$ to $v_{i+1}$
+
 
 

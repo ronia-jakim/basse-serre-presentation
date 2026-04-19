@@ -7,7 +7,26 @@ Let $G$ be a group acting on a tree $T$ by isometries without fixed points. BSO:
   The action of the group above is either
   1. linear ($G$ preserves some line)
   2. parabolic ($G$ preserves one point in $\partial T$)
-  3. hiperbolic (exists $g,h\in G$ such that $Axis(g)\cap Axis(h)$ is finite)
+  3. hyperbolic (exists $g,h\in G$ such that $Axis(g)\cap Axis(h)$ is finite)
 </Theorem>
 
 We say that isometries $\phi$ and $\psi$ are **independent** if $Axis(\phi)\cap Axis(\psi)$ is finite.
+<br />
+
+### Examples
+
+Consider the infinite $k$-regular tree $T_k$.
+
+- linear: 
+  - group: $\mathbb{Z}$
+  - chose a line $L=\{..., v_{-1}, v_0, v_1, ...\}$ in $T_3$
+  - define the action of $\mathbb{Z}$ on $T_k$ as follows: the generator $1\in \mathbb{Z}$ moves $v_i$ to $v_{i+1}$
+- parabolic: *disclaimer: I think this works*
+  - group: $S_{k-1}$
+  - Divide the vertices of $T_k$ into "odd" and "even" ones. Chose an element in $\partial T_k$, put a faucet 🚿 there, open it and look how the water is flowing (it should fill the whole tree). 
+  - Act with $S_{k-1}$ on $T_k$ by permuting the neighbours of the even vertices to which the water will flow. This action should move everything but the element in $\partial T_k$ we chose.
+- hyperbolic: 
+  - group: the free group $F_2=\langle a, b\rangle$
+  - chose two lines $L=\{..., l_{-1}, l_0, l_1, ...\}$ and $\mathit{Ł}=\{..., \mathit{ł}_{-1}, \mathit{ł}_0, \mathit{ł}_1, ...\}$ intersecting in one vertex of $T_k$ ($\mathit{ł}_0=l_0$) 
+  - let the free group $F_2$ act on this tree as follows: $a$ slides along $L$ and $b$ slides along $\mathit{Ł}$.
+
