@@ -1,0 +1,40 @@
+# Amalgams and fundamental domains
+
+<Theorem title="Twierdzoneczko me słoneczko" defaultOpen={false} >
+  Let $(G, T)$ be a tree of groups. There is a graph $X$ containing $T$ and an action of $G_T=\varinjlim(G,T)$ on $X$ which is characterized (up to isomorphism) by the following property:
+  - $T$ is the fundamental domain $X\mod G$
+  - $(\forall\;P\in V(T))\;Stab(P)_{G_T}=G_P$ (repeat for edges)
+  - $X$ is a tree
+</Theorem>
+
+<ConfettiTrigger />
+**Proof** 
+
+part 2: inductively proving $X$ is a tree
+
+- Represent $T$ as a direct limit of a direct system of increasing finite subtrees.
+<div style={{ height: '-2px' }} />
+- $G_T=\varinjlim (G, T)$
+<div style={{ height: '-2px' }} />
+- $X$ can be represented as a direct limit of graphs in the same way $G_T$ is a direct limit (but put orbits $G_TP$ instead of $G_P$ on the diagram)
+
+This reduces the problem to $T$ finite.
+<br />
+
+Induction on $n=|V(T)|$.
+- $n=1$ then $X=T$
+<div style={{ height: '-2px' }} />
+- $n>1$
+  - $\gamma\in E(T)$ such that $\gamma$ ends in a leaf $P\in T$, $T'=T-P$
+  - $G_T=G_{T'}\ast_{G_\gamma}G_P$
+  - $X'=G_{T'}T'$ is a subgraph of $X$ **inductive hypothesis** $X'$ is a tree
+  - $gX'$ for $g\in G_T/G_{T'}$ are pariwise disjoint ($gX'=hX'\implies g^{-1}h\in G_{T'}\implies gX'\cap hX'\cap V(T')=\bigsqcup G_{T'}T'\neq \emptyset$)
+  - $\overline{X}=X$ with $gX'$ contracted to points is a tree since it has fundamental domain $T/T'$ is the edge $\gamma$ with initial vertex being $T'$ compressed to a point and terminal vertex being $P$.
+<Theorem title="Twierdzoniunko" defaultOpen={false}>
+A fundamental domain $X\mod G$ exists iff $G\backslash X$ is a tree. 
+</Theorem>
+
+
+
+
+

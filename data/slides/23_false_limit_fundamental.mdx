@@ -1,0 +1,40 @@
+# Amalgams and fundamental domains
+
+We will now work tireresly to prove the following theorem.
+
+<Theorem title="Twierdzoneczko me słoneczko">
+  Let $(G, T)$ be a tree of groups. There is a graph $X$ containing $T$ and an action of $G_T=\varinjlim(G,T)$ on $X$ which is characterized (up to isomorphism) by the following property:
+  - $T$ is the fundamental domain $X\mod G$
+  - $(\forall\;P\in V(T))\;Stab(P)_{G_T}=G_P$ (repeat for edges)
+  - $X$ is a tree
+</Theorem>
+
+**We say that $X$ as in the theorem are assosiated with $(G, T)$**
+
+<ConfettiTrigger />
+**Proof** 
+
+part 1: construct a candidate for $X$
+
+$$
+V(X):=\bigsqcup_{P\in V(T)} G_TP
+$$ 
+which are isomorphic to $G_T/G_P$ and
+$$
+E(X):=\bigsqcup_{\gamma\in E(T)} G_T\gamma=\bigsqcup_{g\in G_T}\{g\cdot \gamma=(gP, gQ)\;:\;\gamma=(P, Q)\in E(T)\}
+$$
+which are isomorphic to $G_T/G_\gamma$.
+<div style={{ height: '15px' }} />
+
+The inclusions: $G_\gamma\to G_P$ and $G_{\overline{\gamma}}\to G_Q$ for $\gamma=(P, Q)$ are defined for representatives of each orbit the same way as in $(G,T)$.
+<div style={{ height: '15px' }} />
+
+
+What is clear:
+1. $X$ is a graph.
+<div style={{ height: '-2px' }} />
+2. The group $G_T$ acts on $X$ by left translations.
+
+
+
+

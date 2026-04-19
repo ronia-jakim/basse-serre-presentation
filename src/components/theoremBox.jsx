@@ -1,4 +1,8 @@
-export const Theorem = ({ title, children }) => {
+import { useState } from 'react';
+
+export const Theorem = ({ title, children, defaultOpen = true }) => {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  
   const style = {
     border: '#5F9C3F',
     bg: 'rgba(123, 182, 98, 0.05)',
@@ -9,38 +13,44 @@ export const Theorem = ({ title, children }) => {
     <div style={{
       margin: '1.5rem 0',
       padding: '1.2rem',
-      borderRadius: '0px',
       backgroundColor: style.bg,
       borderLeft: `2px solid ${style.border}`, 
       width: '100%',
       boxSizing: 'border-box',
-      position: 'relative'
-    }}>
+      cursor: 'pointer'
+    }}
+    onClick={() => setIsOpen(!isOpen)}
+    >
       {title && (
         <div style={{ 
           fontWeight: 'bold',
-          textAlign: 'left',
           width: '100%',
-          marginBottom: '0.8rem',
           color: style.border,
           fontSize: '1.1rem',
-          paddingBottom: '0.3rem',
-          display: 'inline-block'
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
         }}>
-          {title}
+          <span>{title}</span>
+          <span style={{ 
+            fontSize: '0.8rem', 
+            transition: 'transform 0.2s',
+            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' 
+          }}>
+            ▼
+          </span>
         </div>
       )}
-      <div style={{ 
-        lineHeight: '1.6',
-        color: '#222'
-      }}>
-        <style dangerouslySetInnerHTML={{ __html: `
-          strong {
-            color: #7BB662;
-          }
-        ` }} />
-        {children}
-      </div>
+      
+      {isOpen && (
+        <div style={{ 
+          lineHeight: '1.6',
+          color: '#222',
+          marginTop: '0.8rem'
+        }}>
+          {children}
+        </div>
+      )}
     </div>
   );
 };

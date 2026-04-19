@@ -1,0 +1,45 @@
+# Amalgams and fundamental domains
+
+- $G$ acts on a graph $X$ with $X\mod G=T$
+<div style={{ height: '-2px' }} />
+
+- $(G,T)$ - tree of groups whose $G_P$ and $G\gamma$ are stabilizers in $G$ of vertices and edges of $T$
+<div style={{ height: '-2px' }} />
+
+- $G_T=\varinjlim(G,T)$, $G_P\to G$ and extends to a surjective ($X$ connected) homomorphism $G_T\to G$
+<div style={{ height: '-2px' }} />
+
+On theo ther hand: 
+- $\overline{X}$ - tree associated with $(G,T)$, 
+<div style={{ height: '-2px' }} />
+
+- $T\to T$ extends to $\overline{X}\to X$ equivariant with respect to $G_T\to G$.
+
+<Theorem title="Twierdzoneczko me słoneczko" defaultOpen={true} >
+  The following are equivalent:
+  1. $X$ - tree
+  2. $\overline{X}\to X$ isomorphism
+  3. $G_T\to G$ isomorphism
+</Theorem>
+
+<ConfettiTrigger />
+**Proof** 
+
+$3\implies 2$ $G_T\cong G$ means that $X$ is associated with $(G, T)$ and from the previous two slides such a graph is unique up to isomorphism
+
+$2\implies 1$ once again - tree associated to $(G, T)$ is unique up to isomorphism
+
+$2\implies 3$ since $\overline{X}\cong X$ then $X$ is also associated with $(G, T)$
+
+take $P\in V(T)$ and map stabilizers of $P$ in $G_T$ from construction to stabilizers of $P$ in $G$ ($(G_T)_P\to G_P$) - this is an isomorphism because $\overline{X}\cong X$
+
+since $\overline{X}\cong X$ then $\ker(G_T\to G)$ is contined in $(G_T)_P$ for a collection of $P$, but we established that $(G_T)_P\to G_P$ is injective
+
+$1\implies 2$ $G_TT=\overline{X}$ and $GT=X$ $\implies$ $\overline{X}\to X$ is surjective
+
+$G_T\to G$ indueces isomorphisms between stabilizers of corresponding vertices -> locally injective
+
+relies on the fact that $\overline{X}\to X$ locally injective of a connected graph to a tree is injective: proven by taking a path in $\overline{X}$ and composing it with $\overline{X}\to X$
+
+
+
