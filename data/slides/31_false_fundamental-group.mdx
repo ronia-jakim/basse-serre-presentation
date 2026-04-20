@@ -1,0 +1,44 @@
+# Fundamental group of a graph of groups
+
+<br />
+
+$$
+F(G, Y)=\langle G_P, \gamma\;:\;P\in V(Y), \gamma\in E(Y)\;|\; \overline{\gamma}=\gamma^{-1},\gamma \sigma_\gamma(a)\gamma^{-1}=\sigma_{\overline{\gamma}}(a)\;:\;a\in G_\gamma\rangle
+$$
+if $c=(P_0, P_1,...,P_n)$ is a path in $Y$ with edges $\gamma_1,...,\gamma_n$ and $\mu=(r_0,r_1,...,r_n)$ are elements of $G_{i}$ then 
+$$
+|c, \mu|=r_0\gamma_1r_1\gamma_2r_2...\gamma_nr_n\in F(G,Y)
+$$
+
+Two ways of defining the fundamental group.
+<br />
+
+## via maximal tree $T$
+
+$$
+\pi_1(G, Y, T)=F(G, Y)/\langle \gamma\;:\;\gamma\in E(T) \rangle
+$$
+<br />
+
+## as loops
+
+$$
+\pi_1(G, Y, P_0)=\{ |c, \mu|\in F(G, Y)\;:\;\text{both ends of }c\text{ are }P_0 \}
+$$
+
+<Theorem title="Propozycja nie do odrzucenia">
+  The canonical projection $p:F(G, Y)\to \pi_1(G, Y, T)$ induces an isomrphism $\pi_1(G, Y, P_0)\to \pi_1(G, Y, T)$
+</Theorem>
+
+**Proof** 
+
+define $f$ that is the inverse of $p$
+
+$f:\pi_1(G, Y, T)\to \pi_1(G, Y, P_0)$, $\gamma_P$ is a path in $T$ connecting $P_0$ with $P$
+
+$f(x)=\gamma_Px\gamma_P^{-1}$ if $x\in G_P$
+
+$f(g_\gamma)=\gamma_{o(\gamma)}\gamma\gamma_{t(\gamma)}^{-1}$
+
+
+

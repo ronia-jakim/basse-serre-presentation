@@ -1,0 +1,40 @@
+# Universal cover
+
+- Let $G$ act on a connected graph $X$ without edge inversions. 
+- Let $Y=G\backslash X$ and $T$ be its maximal tree. 
+- We can construct a graph of groups $(G, Y)$ such $\pi_1(G, Y, T)\cong G$.
+- Let $\overline{X}$ be the universal cover of $Y$.
+
+<Theorem title="Stwierdzenie">
+  The following are equivalent
+  1. $X$ is a tree
+  2. $\psi:\widetilde{X}\to X$ is an isomorphism
+  3. $\phi:\pi_1(G, Y, T)\to G$ is an isomorphism
+</Theorem>
+
+<ConfettiTrigger />
+**Proof** 
+
+$1\implies 2$ & $3\implies 1$
+
+<Theorem title="Twierdzoneczko me słoneczko" defaultOpen={false} >
+  The following are equivalent:
+  1. $X$ - tree
+  2. $\widetilde{X}\to X$ isomorphism
+  3. $G_T\to G$ isomorphism
+</Theorem>
+
+$2\implies 1$
+
+because universal cover of $Y$ is a tree
+
+$2\implies 3$
+
+$N=\ker\phi=\ker(\pi_1(G, Y, T)\supseteq G_P\mapsto Stab(jP)\subseteq  G)$
+
+$P\in V(Y)$ then $N\cap G_{\widetilde{P}}=\{1\}$
+
+$n\in N-\{1\}$ then $\widetilde{P}\neq n\widetilde{P}$ in $\widetilde{X}$ but $\psi(n\widetilde{P})=\phi(n)jP=jP=\psi(\widetilde{P})$
+
+
+
